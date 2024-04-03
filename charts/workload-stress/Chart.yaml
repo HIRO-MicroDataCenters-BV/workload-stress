@@ -1,0 +1,6 @@
+apiVersion: v2
+name: workload-stress
+description: Workload for stress testing
+type: application
+version: "0.0.0"
+appVersion: "0.0.0"

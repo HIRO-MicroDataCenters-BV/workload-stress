@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "app.fullname" . }}
+spec:
+  template:
+    metadata:
+      name: {{ include "app.fullname" . }}
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          args:
+            - "--time={{ .Values.arguments.time }}"
+            - "--cpu={{ .Values.arguments.cpu }}"
+            - "--ram={{ .Values.arguments.ram }}"
+            - "--minio_host={{ .Values.arguments.minioHost }}"
+            - "--minio_access_key={{ .Values.arguments.minioAccessKey }}"
+            - "--minio_secret_key={{ .Values.arguments.minioSecretKey }}"
+            - "--minio_bucket_count={{ .Values.arguments.minioBucketCount }}"
+            - "--minio_file_count={{ .Values.arguments.minioFileCount }}"
+            - "--minio_min_size={{ .Values.arguments.minioMinSize }}"
+            - "--minio_max_size={{ .Values.arguments.minioMaxSize }}"

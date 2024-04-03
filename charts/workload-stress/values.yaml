@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+arguments:
+  time: 30
+  cpu: 80
+  ram: 80
+  minioHost:
+  minioAccessKey:
+  minioSecretKey:
+  minioBucketCount: 5
+  minioFileCount: 5
+  minioMinSize: 2
+  minioMaxSize: 20
