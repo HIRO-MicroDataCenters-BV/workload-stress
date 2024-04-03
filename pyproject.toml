@@ -9,8 +9,8 @@ description = "Workload for stress testing"
 readme = "README.md"
 authors = ["HIRO-MicroDataCenters <all-hiro@hiro-microdatacenters.nl>"]
 license = "MIT"
-repository = "https://github.com/glaciation-heu/workload-stress"
-homepage = "https://github.com/glaciation-heu/workload-stress"
+repository = "https://github.com/hiro-microdatacenters-bv/workload-stress"
+homepage = "https://github.com/hiro-microdatacenters-bv/workload-stress"
 
 [tool.poetry.dependencies]
 python = "^3.10"
