@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  workload-stress:
+  - apiVersion: v2
+    appVersion: 0.1.0-dev.0.main.ccac1419
+    created: "2024-04-03T08:55:11.332207598Z"
+    description: Workload for stress testing
+    digest: cc046b5383e9f537784d19e44a22464559781dc6d0c09e960fbcea03afc63336
+    name: workload-stress
+    type: application
+    urls:
+    - https://HIRO-MicroDataCenters-BV.github.io/workload-stress/helm-charts/workload-stress-0.1.0-dev.0.main.ccac1419.tgz
+    version: 0.1.0-dev.0.main.ccac1419
+generated: "2024-04-03T08:55:11.33149334Z"
