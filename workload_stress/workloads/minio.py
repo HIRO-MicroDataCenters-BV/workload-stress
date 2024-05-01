@@ -29,7 +29,8 @@ class MinIOFileManager:
             self.__host,
             access_key=self.__access_key,
             secret_key=self.__secret_key,
-            secure=False,
+            cert_check=False,
+            # secure=False,
         )
 
     def create_uniq_bucket(self) -> str:

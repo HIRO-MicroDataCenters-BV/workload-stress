@@ -22,3 +22,9 @@ spec:
             - "--minio_file_count={{ .Values.arguments.minioFileCount }}"
             - "--minio_min_size={{ .Values.arguments.minioMinSize }}"
             - "--minio_max_size={{ .Values.arguments.minioMaxSize }}"
+            - "--storage_proccess_count={{ .Values.arguments.storageProccessCount }}"
+            - "--storage_file_count={{ .Values.arguments.storageFileCount }}"
+            - "--storage_min_size={{ .Values.arguments.storageMinSize }}"
+            - "--storage_max_size={{ .Values.arguments.storageMaxSize }}"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

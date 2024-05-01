@@ -16,3 +16,17 @@ arguments:
   minioFileCount: 5
   minioMinSize: 2
   minioMaxSize: 20
+  storageProccessCount: 10
+  storageFileCount: 10
+  storageMinSize: 10
+  storageMaxSize: 100
+
+resources:
+  limits:
+    cpu: "4"
+    memory: "8192Mi"
+    ephemeral-storage: "600Mi"
+  requests:
+    cpu: "3"
+    memory: "7168Mi"
+    ephemeral-storage: "500Mi"

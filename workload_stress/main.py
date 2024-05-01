@@ -5,6 +5,7 @@ from .runner import Runner
 from .workloads.cpu import CpuWorkload
 from .workloads.memory import MemoryWorkload
 from .workloads.minio import MinioWorkload
+from .workloads.storage import StorageWorkload
 
 
 def run_workload_stress(
@@ -18,6 +19,10 @@ def run_workload_stress(
     minio_file_count,
     minio_min_size,
     minio_max_size,
+    storage_proccess_count,
+    storage_file_count,
+    storage_min_size,
+    storage_max_size,
 ):
     signal.signal(signal.SIGINT, signal.SIG_DFL)
 
@@ -32,11 +37,16 @@ def run_workload_stress(
     logger.info(f"minio_file_count: {minio_file_count}")
     logger.info(f"minio_min_size (Mb): {minio_min_size}")
     logger.info(f"minio_max_size (Mb): {minio_max_size}")
+    logger.info(f"storage_proccess_count: {storage_proccess_count}")
+    logger.info(f"storage_file_count: {storage_file_count}")
+    logger.info(f"storage_min_size (Mb): {storage_min_size}")
+    logger.info(f"storage_max_size (Mb): {storage_max_size}")
 
     workloads = [
         CpuWorkload,
         MemoryWorkload,
         MinioWorkload,
+        StorageWorkload,
     ]
     runner = Runner(workloads)
     runner.run(
@@ -50,4 +60,8 @@ def run_workload_stress(
         minio_file_count=minio_file_count,
         minio_min_size=minio_min_size,
         minio_max_size=minio_max_size,
+        storage_proccess_count=storage_proccess_count,
+        storage_file_count=storage_file_count,
+        storage_min_size=storage_min_size,
+        storage_max_size=storage_max_size,
     )
