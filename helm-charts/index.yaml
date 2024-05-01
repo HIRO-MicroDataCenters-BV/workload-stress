@@ -12,6 +12,16 @@ entries:
     - https://HIRO-MicroDataCenters-BV.github.io/workload-stress/helm-charts/workload-stress-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
+    appVersion: 0.1.0-dev.1.main.2dbbf091
+    created: "2024-05-01T06:43:22.04037862Z"
+    description: Workload for stress testing
+    digest: 3e49738b4759b342b58763ba5bd41fb09672a226bbf5c0568c7d26c99bd1c3a0
+    name: workload-stress
+    type: application
+    urls:
+    - https://HIRO-MicroDataCenters-BV.github.io/workload-stress/helm-charts/workload-stress-0.1.0-dev.1.main.2dbbf091.tgz
+    version: 0.1.0-dev.1.main.2dbbf091
+  - apiVersion: v2
     appVersion: 0.1.0-dev.0.main.ccac1419
     created: "2024-04-03T08:55:11.332207598Z"
     description: Workload for stress testing
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://HIRO-MicroDataCenters-BV.github.io/workload-stress/helm-charts/workload-stress-0.1.0-dev.0.main.ccac1419.tgz
     version: 0.1.0-dev.0.main.ccac1419
-generated: "2024-04-03T08:57:44.069818231Z"
+generated: "2024-05-01T06:43:22.039752278Z"
